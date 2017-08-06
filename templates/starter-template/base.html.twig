@@ -1,8 +1,19 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <style>
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
 
 {% block body %}
-    {# element nav goes here #}
-    <a href="{{ path('starter_template_index') }}">Home</a>
-    {% block container %}{% endblock %}
+    {% include 'starter-template/navbar.html.twig' %}
+    <div class="container">
+        <div class="starter-template">
+            {% block container %}{% endblock %}
+        </div>
+    </div>
 {% endblock %}
