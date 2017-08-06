@@ -1,1 +1,65 @@
 {% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div class="alert alert-success" role="alert">
+        <strong>Well done!</strong>
+        You successfully read this important alert message
+    </div>
+
+    <div class="alert alert-info" role="alert">
+        <strong>Heads up!</strong>
+        This alert needs your attention, but it's not super important.
+    </div>
+
+    <div class="alert alert-warning" role="alert">
+        <strong>Warning!</strong>
+        Better check yourself, you're not looking too good.
+    </div>
+
+    <div class="alert alert-danger" role="alert">
+        <strong>Oh snap!</strong>
+        Change a few things up and try submitting again.
+    </div>
+
+
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </div>
+
+
+    <div class="alert alert-success" role="alert">
+        <strong>Well done!</strong>
+        You successfully read
+        <a href="#" class="alert-link">this important alert message.</a>
+    </div>
+
+    <div class="alert alert-info" role="alert">
+        <strong>Heads up!</strong>
+        <a href="#" class="alert-link">This alert</a>
+        needs your attention but it's not super important
+    </div>
+
+    <div class="alert alert-warning" role="alert">
+        <strong>Warning!</strong>
+        Better check yourself
+        <a href="#" class="alert-link">you're not looking too good</a>
+    </div>
+
+    <div class="alert alert-danger" role="alert">
+        <strong>Oh snap!</strong>
+        <a href="#" class="alert-link">Change a few things up</a>
+        and try submitting again
+    </div>
+
+{% endblock %}
