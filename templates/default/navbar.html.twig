@@ -6,7 +6,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-    {% endblock %}
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .navbar-brand.custom {
+            padding: 5px 0 5px 10px;
+        }
+    </style>
+{% endblock %}
 
 {% block body %}
     <nav class="navbar navbar-default">
@@ -65,4 +73,15 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand custom" href="#">
+                    <img alt="Brand" src="images/image.png">
+                </a>
+            </div>
+        </div>
+    </nav>
+
 {% endblock %}
