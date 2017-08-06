@@ -24,5 +24,14 @@ class DefaultController extends Controller
     {
         return $this->render('default/alerts.html.twig');
     }
+    /**
+     * @Route("/navbar")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function navbar()
+    {
+        return $this->render('default/navbar.html.twig');
+    }
+
 
 }
