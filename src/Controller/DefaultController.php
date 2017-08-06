@@ -15,4 +15,14 @@ class DefaultController extends Controller
     {
         return $this->render('default/index.html.twig');
     }
+
+    /**
+     * @Route("/alerts")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function alerts()
+    {
+        return $this->render('default/alerts.html.twig');
+    }
+
 }
