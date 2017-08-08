@@ -12,6 +12,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class NarrowJumbotronController extends Controller
 {
     /**
+     *  Relevant path to our templates
+     */
+    const TEMPLATE_PATH = 'narrow-jumbotron/body/container/';
+
+    /**
      * @Route("/example/narrow-jumbotron", name="narrow_jumbotron_home")
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -25,7 +30,7 @@ class NarrowJumbotronController extends Controller
             $content[] = $item;
         }
         return $this->render(
-            'narrow-jumbotron/home.html.twig',
+            $this::TEMPLATE_PATH . 'home/index.html.twig',
             [
                 'content' => $content
             ]
@@ -38,7 +43,7 @@ class NarrowJumbotronController extends Controller
      */
     public function aboutAction()
     {
-        return $this->render('narrow-jumbotron/about.html.twig');
+        return $this->render($this::TEMPLATE_PATH . 'about/index.html.twig');
     }
 
     /**
@@ -47,7 +52,7 @@ class NarrowJumbotronController extends Controller
      */
     public function contactAction()
     {
-        return $this->render('narrow-jumbotron/contact.html.twig');
+        return $this->render($this::TEMPLATE_PATH . 'contact/index.html.twig');
     }
 
     /**
@@ -56,6 +61,6 @@ class NarrowJumbotronController extends Controller
      */
     public function signUpAction()
     {
-        return $this->render('narrow-jumbotron/signup.html.twig');
+        return $this->render($this::TEMPLATE_PATH . 'signup/index.html.twig');
     }
 }
