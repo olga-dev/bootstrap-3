@@ -1,7 +1,22 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <style>
+        .container {
+            max-width: 730px;
+            margin-top: 15px;
+        }
+        .header {
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 30px;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
-    {% include 'narrow-jumbotron/body/navbar.html.twig' %}
-    {% block container %}{% endblock %}
-    {% include 'narrow-jumbotron/body/footer.html.twig' %}
+    <div class="container">
+        {% include 'narrow-jumbotron/body/navbar.html.twig' %}
+        {% block container %}{% endblock %}
+        {% include 'narrow-jumbotron/body/footer.html.twig' %}
+    </div>
 {% endblock %}

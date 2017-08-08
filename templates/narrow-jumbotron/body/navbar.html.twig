@@ -1,1 +1,18 @@
-nav-bar
+{% set route = app.request.attributes.get('_route') %}
+
+<div class="header clearfix">
+    <nav>
+        <ul class="nav nav-pills pull-right">
+            <li {{ route ==  'narrow_jumbotron_home' ? 'class="active"' }}>
+                <a href="{{ path('narrow_jumbotron_home') }}">Home</a>
+            </li>
+            <li {{ route ==  'narrow_jumbotron_about' ? 'class="active"' }}>
+                <a href="{{ path('narrow_jumbotron_about') }}">About</a>
+            </li>
+            <li {{ route ==  'narrow_jumbotron_contact' ? 'class="active"' }}>
+                <a href="{{ path('narrow_jumbotron_contact') }}">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <h3 class="text-muted">Project name</h3>
+</div>
