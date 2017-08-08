@@ -17,7 +17,19 @@ class NarrowJumbotronController extends Controller
      */
     public function homeAction()
     {
-        return $this->render('narrow-jumbotron/home.html.twig');
+        $content = [];
+        for ($i = 0; $i < 10; $i++) {
+            $item = new \stdClass();
+            $item->head = 'Subheading';
+            $item->text = 'Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.';
+            $content[] = $item;
+        }
+        return $this->render(
+            'narrow-jumbotron/home.html.twig',
+            [
+                'content' => $content
+            ]
+        );
     }
 
     /**
