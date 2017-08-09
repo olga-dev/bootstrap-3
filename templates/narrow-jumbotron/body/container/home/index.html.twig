@@ -1,5 +1,21 @@
 {% extends 'narrow-jumbotron/base.html.twig' %}
 
 {% block container %}
-Home
+    <div class="jumbotron">
+        <h1>Jumbotron heading</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            Fusce dapibus, tellus ac cursus
+            commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p>
+            <a class="btn btn-lg btn-success" href="{{ path('narrow_jumbotron_signup') }}">Sign uptoday</a>
+        </p>
+    </div>
+    <div class="row marketing">
+        {% for item in content %}
+            <div class="col-lg-6">
+                <h4>{{ item.head }}</h4>
+                <p>{{ item.text }}</p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
