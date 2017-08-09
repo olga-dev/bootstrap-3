@@ -1,5 +1,30 @@
 {% extends 'narrow-jumbotron/base.html.twig' %}
 
 {% block container %}
-    Sign Up
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="text-center">Login</h1>
+            </div>
+            <div class="modal-body">
+                <form class="col-md-12 center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-lg" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-block btn-lg btn-primary" value="Login">
+                        <span class="pull-right"><a href="#">Register</a></span>
+                        <span><a href="#">Forgot Password</a></span>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
